@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+#space-canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+#hud {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 280px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+              0 0 20px rgba(100, 200, 255, 0.1);
+  z-index: 1000;
+}
+
+.hud-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+}
+
+.hud-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #64c8ff;
+  margin-bottom: 4px;
+  text-shadow: 0 0 10px rgba(100, 200, 255, 0.5);
+}
+
+.hud-header .subtitle {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 300;
+}
+
+.hud-section {
+  margin-bottom: 20px;
+}
+
+.hud-section:last-child {
+  margin-bottom: 0;
+}
+
+.hud-section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #88d4ff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 11px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.stat:last-child {
+  margin-bottom: 0;
+}
+
+.stat-label {
+  color: #bbb;
+  font-weight: 400;
+}
+
+.stat-value {
+  color: #64c8ff;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.stat.highlight .stat-value {
+  color: #ff6b9d;
+  text-shadow: 0 0 8px rgba(255, 107, 157, 0.6);
+}
+
+.control-group {
+  margin-bottom: 12px;
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.control-group label {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+  user-select: none;
+}
+
+.control-group label:hover {
+  color: #64c8ff;
+}
+
+.control-group select {
+  width: 100%;
+  padding: 6px 10px;
+  margin-top: 6px;
+  background: rgba(20, 30, 50, 0.8);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  border-radius: 6px;
+  color: #64c8ff;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.control-group select:hover {
+  border-color: rgba(100, 200, 255, 0.5);
+  background: rgba(20, 30, 50, 0.9);
+}
+
+.control-group select:focus {
+  border-color: #64c8ff;
+  box-shadow: 0 0 8px rgba(100, 200, 255, 0.3);
+}
+
+.control-group input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #64c8ff;
+}
+
+

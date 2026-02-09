@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broad-Phase Collision Visualizer</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <canvas id="space-canvas"></canvas>
+  
+  <div id="hud">
+    <div class="hud-header">
+      <h1>Broad-Phase Collision Visualizer</h1>
+      <p class="subtitle">Spatial Grid vs Brute Force</p>
+    </div>
+    
+    <div class="hud-section">
+      <h2>Performance</h2>
+      <div class="stat">
+        <span class="stat-label">Entities:</span>
+        <span class="stat-value" id="stat-entities">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">BruteForce Tests:</span>
+        <span class="stat-value" id="stat-brute-tests">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">SpatialGrid Tests:</span>
+        <span class="stat-value" id="stat-grid-tests">0</span>
+      </div>
+      <div class="stat highlight">
+        <span class="stat-label">Speedup:</span>
+        <span class="stat-value" id="stat-speedup">—</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Collision Pairs:</span>
+        <span class="stat-value" id="stat-pairs">0</span>
+      </div>
+    </div>
+    
+    <div class="hud-section">
+      <h2>Controls</h2>
+      <div class="control-group">
+        <label for="entity-count">Entity Count:</label>
+        <select id="entity-count">
+          <option value="50">50</option>
+          <option value="100" selected>100</option>
+          <option value="200">200</option>
+          <option value="300">300</option>
+          <option value="500">500</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-grid" checked>
+          Show Grid Overlay
+        </label>
+      </div>
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="show-bounds">
+          Show Bounding Boxes
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>
+
+
